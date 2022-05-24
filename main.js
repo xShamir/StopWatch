@@ -14,6 +14,7 @@ let intervalId;
 let hrs = 0;
 let mins = 0;
 let secs = 0;
+let mSec = 0;
 
 startBtn.addEventListener("click", () => {
     if(paused)
@@ -45,7 +46,7 @@ resetBtn.addEventListener("click", () => {
     mins = 0;
     secs = 0;
 
-    timeDisplay.textContent = "00h:00m:00s";
+    timeDisplay.textContent = "00h:00m:00s:000ms";
 });
 
 function updateTime()
@@ -55,11 +56,12 @@ function updateTime()
     secs = pad(Math.floor((elapsedTime / 1000) % 60));
     mins = pad(Math.floor((elapsedTime / (1000 * 60)) % 60));
     hrs = pad(Math.floor((elapsedTime / (1000 * 60 * 60)) % 60));
+    mSec = pad(Math.floor(elapsedTime % 999), 3);
 
-    timeDisplay.textContent = `${hrs}h:${mins}m:${secs}s`
+    timeDisplay.textContent = `${hrs}h:${mins}m:${secs}s:${mSec}ms`
 }
 
-function pad(unit)
+function pad(unit, nominator=2)
 {
-    return (("0") + unit).length > 2 ? unit : "0" + unit;
+    return (("0") + unit).length > nominator ? unit : "0" + unit;
 }
