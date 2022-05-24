@@ -1,2 +1,2 @@
 # StopWatch
- ⏱ Interactive Stopwatch written in JavaScript with a nice & clean UI.
+ ⏱ Interactive Stopwatch written in JavaScript, HTML & CSS with a nice & clean UI.
