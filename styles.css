@@ -7,7 +7,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: url("maths.webp");
+    background-image: url("images/maths.webp");
 }
 
 .timerBtn {
