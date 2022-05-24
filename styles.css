@@ -86,3 +86,14 @@ body {
     background-color: #222222;
     padding-bottom: 35px;
 }
+
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    #timeContainer {
+      width: 100%;
+    }
+
+    #timeDisplay {
+        font-size: 50px;
+    }
+}
