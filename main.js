@@ -56,7 +56,7 @@ function updateTime()
     secs = pad(Math.floor((elapsedTime / 1000) % 60));
     mins = pad(Math.floor((elapsedTime / (1000 * 60)) % 60));
     hrs = pad(Math.floor((elapsedTime / (1000 * 60 * 60)) % 60));
-    mSec = pad(Math.floor(elapsedTime % 999), 3);
+    mSec = pad(Math.floor(elapsedTime % 900), 3);
 
     timeDisplay.textContent = `${hrs}h:${mins}m:${secs}s:${mSec}ms`
 }
