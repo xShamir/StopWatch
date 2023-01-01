@@ -46,7 +46,7 @@ resetBtn.addEventListener("click", () => {
     mins = 0;
     secs = 0;
 
-    timeDisplay.textContent = "00h:00m:00s:000ms";
+    timeDisplay.textContent = "0h:0m:0s";
 });
 
 function updateTime()
@@ -56,9 +56,8 @@ function updateTime()
     secs = pad(Math.floor((elapsedTime / 1000) % 60));
     mins = pad(Math.floor((elapsedTime / (1000 * 60)) % 60));
     hrs = pad(Math.floor((elapsedTime / (1000 * 60 * 60)) % 60));
-    mSec = pad(Math.floor(elapsedTime % 900), 3);
 
-    timeDisplay.textContent = `${hrs}h:${mins}m:${secs}s:${mSec}ms`
+    timeDisplay.textContent = `${hrs}h:${mins}m:${secs}s`
 }
 
 function pad(unit, nominator=2)
